@@ -22,7 +22,7 @@ angular.module('jsonparserApp', [
     //Content
     $scope.prettified = "";
     var prettifiedMini = "";
-    $scope.prettify = () => {
+    $scope.prettify = function(){
       console.log($scope.raw);
       try {
         var obj = JSON.parse($scope.raw);
@@ -35,7 +35,7 @@ angular.module('jsonparserApp', [
       }
     }
     //Set class css
-    $scope.options = (cls) => {
+    $scope.options = function(cls){
       cls += $scope.showTypes ? " show-type" : "";
       cls += $scope.showColor ? " show-color" : "";
       cls += $scope.showIndex ? " show-index" : "";
@@ -43,13 +43,13 @@ angular.module('jsonparserApp', [
     }
     //Change layout
     $scope.boxHeight = 90;
-    $scope.changeLayout = () => {
+    $scope.changeLayout = function(){
       $scope.vertical = !$scope.vertical;
       $scope.boxHeight = $scope.boxHeight == 90 ? 44: 90;
     }
     //Change mini/full
-    $scope.toggleMini = () => {
-      let temp = $scope.prettified;
+    $scope.toggleMini = function(){
+      var temp = $scope.prettified;
       $scope.prettified = prettifiedMini;
       prettifiedMini = temp;
     }
