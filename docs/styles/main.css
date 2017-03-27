@@ -1,0 +1,133 @@
+html {
+    overflow-y: scroll;
+}
+.string.show-color {
+    color: lightseagreen;
+}
+.string.show-type::before{
+    content: " string ";
+    margin-right: 10px;
+    color: white;
+    background-color: gray;
+    border-radius: 10px;
+}
+.string.show-type.show-color::before{
+    background-color: lightseagreen;
+}
+
+.number.show-color { 
+    color: lime; 
+}
+.number.show-type::before{
+    content: " number ";
+    margin-right: 10px;
+    color: white;
+    background-color: gray;
+    border-radius: 10px;
+}
+.number.show-type.show-color::before{
+    background-color: lime;
+}
+
+.boolean.show-color { 
+    color: blueviolet; 
+}
+.boolean.show-type::before{
+    content: " boolean ";
+    margin-right: 10px;
+    color: white;
+    background-color: gray;
+    border-radius: 10px;
+}
+.boolean.show-type.show-color::before{
+    background-color: blueviolet;
+}
+
+.null.show-color { 
+    color: lightsalmon; 
+}
+.null.show-type::before{
+    content: " null ";
+    margin-right: 10px;
+    color: white;
+    background-color: gray;
+    border-radius: 10px;
+}
+.null.show-type.show-color::before{
+  background-color: lightsalmon;
+}
+
+.object.show-color,
+.object-close.show-color { 
+    color: seagreen; 
+}
+.object.show-type::before{
+    content: " object ";
+    margin-right: 10px;
+    color: white;
+    background-color: gray;
+    border-radius: 10px;
+}
+.object.show-type.show-color::before{
+  background-color: seagreen;
+}
+
+
+.array.show-color,
+.array-close.show-color { 
+    color: lightpink; 
+}
+.array.show-type::before{
+    content: " array ";
+    margin-right: 10px;
+    color: white;
+    background-color: gray;
+    border-radius: 10px;
+}
+.array.show-type.show-color::before{
+    background-color: lightpink;
+}
+
+.index.show-index::before{
+    /*content: " hey ";*/
+    content: attr(data-before);
+    margin-right: 5px;
+    color: white;
+    background-color: gray;
+    border-radius: 4px;
+}
+.index.show-index.show-color::before{
+    background-color: saddlebrown
+}
+/*.show-index::before{
+    content: attr(data-before);
+}*/
+
+
+.key.show-color { 
+    color: crimson; 
+}
+
+pre {
+    white-space: pre-wrap;
+    text-align: justify;
+    overflow: auto;
+    font-weight: 700;
+    background-color: lightgray;
+    overflow-y: scroll;
+}
+textarea {
+    min-width: 100%;
+    border-width: 2px;
+    border-radius: 5px;
+    border-color: black;
+}
+
+.navbar {
+    margin-bottom: 5px;
+}
+
+.navbar-inverse .navbar-nav > li > a:hover {
+    background-color: lightblue;
+    color: black;
+}
